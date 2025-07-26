@@ -12,6 +12,10 @@
         name = "hydro";
         src = pkgs.fishPlugins.hydro.src;
       }
+      {
+        name = "autopair";
+	src = pkgs.fishPlugins.autopair.src;
+      }
     ];
     shellInit = ''
       source ~/.nix-profile/etc/profile.d/nix.fish
