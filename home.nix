@@ -24,6 +24,7 @@
     pkgs.bat
     pkgs.fd
     pkgs.mosh
+    pkgs.yazi
 
     pkgs.git
     pkgs.ffmpeg
