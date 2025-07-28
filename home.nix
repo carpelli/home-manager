@@ -28,6 +28,8 @@
 
     pkgs.git
     pkgs.ffmpeg
+    pkgs.helix
+    pkgs.terminal-notifier
 
     pkgs.podman
     pkgs.nil
