@@ -90,6 +90,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    MOSH_SSH = "/usr/bin/ssh";
   };
 
   # Let Home Manager install and manage itself.
