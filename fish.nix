@@ -27,7 +27,6 @@
     ];
     shellInit = ''
       set -g async_prompt_functions _pure_prompt_git
-      source ~/.nix-profile/etc/profile.d/nix.fish
     '';
   };
   programs.direnv.enable = true;
