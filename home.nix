@@ -51,7 +51,12 @@
     enable = true;
     viAlias = true;
   };
-
+  
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+  
   programs.zsh.enable = true;
   home.shell.enableFishIntegration = true;
   home.shell.enableZshIntegration = true;
