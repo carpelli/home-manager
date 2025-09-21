@@ -19,15 +19,9 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    pkgs.fzf
-    pkgs.bat
-    pkgs.fd
     pkgs.mosh
-    pkgs.yazi
-
     pkgs.git
     pkgs.ffmpeg
-    pkgs.helix
     # pkgs.terminal-notifier
 
     pkgs.podman
@@ -47,6 +41,11 @@
     # '')
   ];
 
+  programs.helix = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -56,6 +55,12 @@
     enable = true;
     nix-direnv.enable = true;
   };
+
+  programs.bat.enable = true;
+  programs.fd.enable = true;
+  programs.fzf.enable = true;
+  programs.yazi.enable = true;
+  programs.ripgrep.enable = true;
   
   programs.zsh.enable = true;
   home.shell.enableFishIntegration = true;
@@ -92,9 +97,6 @@
   #
   #  /etc/profiles/per-user/otis/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "hx";
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
