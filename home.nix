@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, agenix, ... }:
 
 {
   imports = [ ./fish.nix ];
@@ -19,6 +19,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    agenix.packages.${pkgs.system}.default
+    
     pkgs.mosh
     pkgs.git
     pkgs.ffmpeg
@@ -61,6 +63,7 @@
   programs.fzf.enable = true;
   programs.yazi.enable = true;
   programs.ripgrep.enable = true;
+  programs.lazygit.enable = true;
   
   programs.zsh.enable = true;
   home.shell.enableFishIntegration = true;
