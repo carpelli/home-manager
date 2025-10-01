@@ -4,7 +4,7 @@
   home.sessionVariables = {
     MOSH_SSH = "/usr/bin/ssh";
   };
-  programs.fish.shellInit = ''
+  programs.fish.loginShellInit = ''
     source ~/.nix-profile/etc/profile.d/nix.fish
   '';
 }
