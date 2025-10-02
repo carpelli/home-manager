@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   imports = [ ./home.nix ];
   home.homeDirectory = "/Users/otis";
@@ -5,6 +7,6 @@
     MOSH_SSH = "/usr/bin/ssh";
   };
   programs.fish.loginShellInit = ''
-    source ~/.nix-profile/etc/profile.d/nix.fish
+    source ${config.home.profileDirectory}/etc/profile.d/nix.fish
   '';
 }
