@@ -28,6 +28,7 @@
 
     pkgs.podman
     pkgs.nil
+    pkgs.gemini-cli
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -100,6 +101,9 @@
   #
   #  /etc/profiles/per-user/otis/etc/profile.d/hm-session-vars.sh
   #
+  home.sessionVariables = {
+    GEMINI_CLI_SYSTEM_SETTINGS_PATH = "${config.home.homeDirectory}/.config/gemini-cli/settings.json";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
