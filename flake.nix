@@ -21,12 +21,13 @@
     };
 
     homeConfigurations.otis = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-darwin;
+      pkgs = nixpkgs.legacyPackages.${builtins.currentSystem};
       extraSpecialArgs = { agenix = inputs.agenix; };
       modules = [
         inputs.agenix.homeManagerModules.default
+      ] ++ (if builtins.currentSystem == "x86_64-darwin" then [
         ./mac.nix
-      ];
+      ] else []);
     };
 
   };
