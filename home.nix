@@ -22,7 +22,6 @@
     agenix.packages.${pkgs.system}.default
     
     pkgs.mosh
-    pkgs.git
     pkgs.ffmpeg
     # pkgs.terminal-notifier
 
@@ -43,6 +42,11 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+
+  programs.git = {
+    enable = true;
+    ignores = [ ".direnv" ]
+  }
 
   programs.helix = {
     enable = true;
