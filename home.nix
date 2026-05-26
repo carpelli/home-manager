@@ -46,7 +46,7 @@
   programs.git = {
     enable = true;
     ignores = [ ".direnv" ];
-  }
+  };
 
   programs.helix = {
     enable = true;
